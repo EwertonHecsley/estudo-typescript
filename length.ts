@@ -10,6 +10,31 @@ function convert(value: number, fromUnit: string, toUnit: string): number {
     return value * Math.pow(10, exponent);
 };
 
+// ./mass.ts
+
+const units2 = ['kg', 'hg', 'dag', 'g', 'dg', 'cg', 'mg'];
+
+function convert2(value: number, fromUnit: string, toUnit: string): number {
+    const fromIndex = units.indexOf(fromUnit);
+    const toIndex = units.indexOf(toUnit);
+    const exponent = toIndex - fromIndex;
+
+    return value * Math.pow(10, exponent);
+};
+
+// ./capacity.ts
+
+const units3 = ['kl', 'hl', 'dal', 'l', 'dl', 'cl', 'ml'];
+
+function convert3(value: number, fromUnit: string, toUnit: string): number {
+    const fromIndex = units.indexOf(fromUnit);
+    const toIndex = units.indexOf(toUnit);
+    const exponent = toIndex - fromIndex;
+
+    return value * Math.pow(10, exponent);
+};
+
+
 type Character = {
     nickname: string,
     class: string,
